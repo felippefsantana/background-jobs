@@ -11,7 +11,7 @@ async function store(req: Request, res: Response) {
   }
 
   // Add RegistrationMail job to queue
-  await Queue.add("RegistrationMail", { user });
+  await Queue.add("send", { user });
 
   return res.status(201).json({
     success: true,

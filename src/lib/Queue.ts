@@ -1,7 +1,6 @@
 import { Queue } from "bullmq";
-import redisConfig from "../config/redis";
-import RegistrationMail from "../jobs/RegistrationMail";
-// import * as jobs from "../jobs";
+// import redisConfig from "../config/redis";
+import * as jobs from "../jobs";
 
 // const queues = Object.values(jobs).map(job => ({
 //   bullmq: new Queue(job.key),
@@ -20,6 +19,6 @@ import RegistrationMail from "../jobs/RegistrationMail";
 // const mailQueue = new Queue(RegistrationMail.key, {
 //   connection: redisConfig
 // });
-const mailQueue = new Queue(RegistrationMail.key);
+const mailQueue = new Queue(jobs.RegistrationMail.key);
 
 export default mailQueue;
