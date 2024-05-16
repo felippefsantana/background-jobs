@@ -17,10 +17,3 @@ export default {
     return queue.bullmq.add(jobName, data);
   }
 };
-
-// const mailQueue = new Queue(RegistrationMail.key, {
-//   connection: redisConfig
-// });
-// const mailQueue = new Queue(jobs.RegistrationMail.key);
-
-// export default mailQueue;

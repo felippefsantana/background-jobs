@@ -21,11 +21,3 @@ Queue.queues.forEach(queue => {
     console.log(error);
   });
 });
-
-// const worker = new Worker(
-//   Queue.name,
-//   jobs.RegistrationMail.handle,
-//   {
-//     connection: redisConfig
-//   }
-// );
